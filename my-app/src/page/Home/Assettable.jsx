@@ -1,25 +1,55 @@
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import React from 'react'
+import { Avatar,AvatarImage } from '@/components/ui/avatar'
 
 function Assettable() {
   return (
     <div>
       <Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
+ 
   <TableHeader>
+   
     <TableRow>
-      <TableHead className="w-[100px]">Invoice</TableHead>
-      <TableHead>Status</TableHead>
-      <TableHead>Method</TableHead>
-      <TableHead className="text-right">Amount</TableHead>
+      <TableHead className="w-[100px]">COIN</TableHead>
+      <TableHead>SYMBOL</TableHead>
+      <TableHead>VOLUME</TableHead>
+      <TableHead>MARKET CAP</TableHead>
+      <TableHead>24HR</TableHead>
+      <TableHead className="text-right">PRICE</TableHead>
     </TableRow>
   </TableHeader>
   <TableBody>
+  {[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1].map((item,index)=>
+        <TableRow key={index}>
+        <TableCell className="font-medium flex items-center gap-2">
+          <Avatar className="-z-50">
+              <AvatarImage src="https://coin-images.coingecko.com/coins/images/
+  1/large/bitcoin.png?1696501400"></AvatarImage>
+          <span>Bitcoin</span>
+          </Avatar>
+        </TableCell>
+        <TableCell>BTC</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell className="text-right">23456789</TableCell>
+      </TableRow>
+    )}
     <TableRow>
-      <TableCell className="font-medium">INV001</TableCell>
-      <TableCell>Paid</TableCell>
-      <TableCell>Credit Card</TableCell>
-      <TableCell className="text-right">$250.00</TableCell>
-    </TableRow>
+        <TableCell className="font-medium flex items-center gap-2">
+          <Avatar className="-z-50">
+              <AvatarImage src="https://coin-images.coingecko.com/coins/images/
+  1/large/bitcoin.png?1696501400"></AvatarImage>
+          <span>Bitcoin</span>
+          </Avatar>
+        </TableCell>
+        <TableCell>BTC</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell>456789567</TableCell>
+        <TableCell className="text-right">23456789</TableCell>
+      </TableRow>
+    
   </TableBody>
 </Table>
 
