@@ -1,14 +1,17 @@
 import { useState } from 'react'
 import { Button } from './components/ui/button';
-
+import Home from './page/Home/Home';
 import './App.css'
+import Navbar from './page/Navbar/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-     <Button>dfdfdf</Button>
+    
+     <Navbar></Navbar>
+     <Home></Home>
     </>
   )
 }
