@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import Sidebar from '@/Sidebar'
+import Sidebar from '@/page/Navbar/Sidebar'
 import {DragHandleHorizontalIcon, MagnifyingGlassIcon} from '@radix-ui/react-icons'
 import React from 'react'
 

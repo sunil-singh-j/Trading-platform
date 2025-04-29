@@ -2,8 +2,9 @@ import { ActivityLogIcon, BookmarkIcon, DashboardIcon, ExitIcon, HomeIcon, Perso
 import { CreditCardIcon, Icon, LandmarkIcon, WalletIcon } from 'lucide-react'
 import path from 'path'
 import React from 'react'
-import { Button } from './components/ui/button'
-import { SheetClose, SheetContent } from './components/ui/sheet'
+import { Button } from '../../components/ui/button'
+import { SheetClose, SheetContent } from '../../components/ui/sheet'
+import { useNavigate } from 'react-router-dom'
 const menu=[
     {name:"Home",path:"/",icon:<HomeIcon className='h-6 w-6'></HomeIcon>},
     {name:"Protfolio",path:"/portfolio",icon:<DashboardIcon className='h-6 w-6'></DashboardIcon>},
@@ -16,17 +17,20 @@ const menu=[
     {name:"Logout",path:"/",icon:<ExitIcon className='h-6 w-6'></ExitIcon>},
 ]
 const Sidebar = () => {
+  const navigate=useNavigate();
+
   return (
     <div className='mt-10 space-y-5'>
         {menu.map((item)=>(
             <div key={item.name}>
                 <SheetClose className='w-full' >
-                <Button variant="outline" className="flex items-center gap-5 py-6 w-full">
+                <Button onClick={()=>navigate(item.path)}
+                 variant="outline" className="flex items-center gap-5 py-6 w-full">
                      <span className='w-8'>
                         {item.icon}
                       </span>
-                     <p>item.name</p>
-                 </Button>
+                     <p>{item.name}</p>
+                 </Button >
                 </SheetClose>
             </div>
         ))}
