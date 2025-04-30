@@ -7,6 +7,7 @@ import { DollarSign, Shuffle, WalletIcon } from 'lucide-react'
 import React from 'react'
 import TopupForm from './TopupForm'
 import TransformForm from './TransformForm'
+import WithdrawalForm from './WithdrawalForm'
 
 const Wallet = () => {
   return (
@@ -65,7 +66,7 @@ const Wallet = () => {
                   <DialogHeader>
                     <DialogTitle>Request Withdrawal</DialogTitle>
                   </DialogHeader>
-                  <TopupForm></TopupForm>
+                  <WithdrawalForm></WithdrawalForm>
                 </DialogContent>
               </Dialog>
 
