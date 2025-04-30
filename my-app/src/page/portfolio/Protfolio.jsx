@@ -5,18 +5,18 @@ import { Avatar,AvatarImage } from '@/components/ui/avatar'
 const Protfolio = () => {
   return (
     <div className='p-5 lg:p-20'>
-      <h1 className='font-bold text-3xl pb-5' >Protfolio</h1>
-         <Table>
+      <h1 className='font-bold text-3xl pb-5 text-left' >Protfolio</h1>
+         <Table className="border">
         
          <TableHeader>
           
            <TableRow>
-             <TableHead className="">Assets</TableHead>
+             <TableHead className="py-5">Coin</TableHead>
              <TableHead>Price</TableHead>
              <TableHead>Unit</TableHead>
              <TableHead>Change</TableHead>
              <TableHead>Change%</TableHead>
-             <TableHead >Valume</TableHead>
+             <TableHead className="text-right" >Valume</TableHead>
            </TableRow>
          </TableHeader>
          <TableBody>
